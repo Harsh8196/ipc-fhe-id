@@ -47,6 +47,7 @@ pub mod burntfunds;
 pub mod chainmetadata;
 pub mod cron;
 pub mod diamond;
+pub mod customsyscall;
 pub mod eam;
 pub mod ethaccount;
 pub mod evm;

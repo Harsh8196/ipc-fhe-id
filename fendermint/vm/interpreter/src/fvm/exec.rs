@@ -5,7 +5,7 @@ use anyhow::Context;
 use async_trait::async_trait;
 use std::collections::HashMap;
 
-use fendermint_vm_actor_interface::{chainmetadata, cron, system};
+use fendermint_vm_actor_interface::{chainmetadata, cron, customsyscall, system};
 use fvm::executor::ApplyRet;
 use fvm_ipld_blockstore::Blockstore;
 use fvm_shared::{address::Address, ActorID, MethodNum, BLOCK_GAS_LIMIT};
