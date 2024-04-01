@@ -247,6 +247,16 @@ where
                 None,
             )
             .context("failed to create chainmetadata actor")?;
+        // Initialize the customsyscall actor which gives an example of calling a custom syscall
+        state
+        .create_custom_actor(
+            fendermint_actor_customsyscall::CUSTOMSYSCALL_ACTOR_NAME,
+            customsyscall::CUSTOMSYSCALL_ACTOR_ID,
+            &EMPTY_ARR,
+            TokenAmount::zero(),
+            None,
+        )
+        .context("failed to create customsyscall actor")?;
 
         let eam_state = fendermint_actor_eam::State::new(
             state.store(),
