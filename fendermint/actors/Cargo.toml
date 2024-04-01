@@ -10,6 +10,8 @@ fendermint_actor_chainmetadata = { path = "chainmetadata", features = [
     "fil-actor",
 ] }
 fendermint_actor_eam = { path = "eam", features = ["fil-actor"] }
+
+[target.'cfg(target_arch = "x86_64")'.dependencies]
 fendermint_actor_customsyscall = { path = "customsyscall", features = [
     "fil-actor",
 ] }
